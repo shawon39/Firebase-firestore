@@ -1,15 +1,18 @@
 <html>
 	<head>
-    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<h1>Cloud Cafe</h1>
 
 		<div class="content">
-			<form id="add-cafe-form"></form>
-
+			<form id="add-cafe-form">
+				<input type="text" name="name" placeholder="Cafe name" />
+				<input type="text" name="city" placeholder="Cafe city" />
+				<button>Add Cafe</button>
+			</form>
 			<ul id="cafe-list"></ul>
 		</div>
 
@@ -23,9 +26,9 @@
 				messagingSenderId: "215924766926",
 				appId: "1:215924766926:web:464610832c639a99b0789f",
 			};
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-      db.settings({timestampsInSnapshorts: true});
+			firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+			db.settings({ timestampsInSnapshorts: true });
 		</script>
 		<script src="app.js"></script>
 	</body>
